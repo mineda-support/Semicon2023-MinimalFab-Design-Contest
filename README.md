@@ -97,6 +97,7 @@ Run Menu → Tools → DRC → DRC for ICPS2023_5.
 
 ![](https://paper-attachments.dropboxusercontent.com/s_B9AB128CD32F29A56B153513EAD5967CACC1D76117513D7A1DC8EF76295E1344_1699321278735_image.png)
 
+
 Please correct the layout until the error disappears.
 
 ## Create a schematic for LVS
@@ -104,12 +105,12 @@ Please correct the layout until the error disappears.
 **Explanation for Pre-processing**
 As shown in the figure, LVS compares the reference netlist extracted from the schematic with the netlist extracted from the layout.
 
-![ユーザーがアップロードした画像：image.png](https://paper-attachments.dropboxusercontent.com/s_E5468CE420250733B382F3B861A4519273684DD86FEEFAA88993C7F14B1F9E31_1604551151072_image.png)
+![](https://paper-attachments.dropboxusercontent.com/s_D77ECE07A617D0EC4BA135230251D2F6E0BD93906A026F633371E2068C2C230D_1699363436615_image.png)
 
 
 The script get_reference preprocesses the netlist output from the schematic editor.
 **Creating a circuit netlist**
-The created circuit diagram is nand_min.sch shown in [+Participate in the Minimal Fab Design Contest: Create-a-schematic](https://paper.dropbox.com/doc/Participate-in-the-Minimal-Fab-Design-Contest-Create-a-schematic-Nx6HLSLlAomupxZKQSsIH#:uid=669305565414356345640357&amp;h2=Create-a-schematic). The goal of LVS is to match nand_sample.GDS in the [+Minimal Fab Design Contest: Completed Example](https://www.dropbox.com/scl/fi/brm8pu9swck2n0yt36smz/Participate-in-the-Minimal-Fab-Design-Contest.paper?rlkey=j39e30d1chc5rps2c2uq6vp8p&dl=0#:h2=Completed-Example), but the layout contains many floating MOS elements that were not used.
+The created circuit diagram is nand_min.sch shown in [+Participate in the Minimal Fab Design Contest: Create-a-schematic](https://paper.dropbox.com/doc/Participate-in-the-Minimal-Fab-Design-Contest-Create-a-schematic-Nx6HLSLlAomupxZKQSsIH#:uid=669305565414356345640357&amp;h2=Create-a-schematic) . The goal of LVS is to match nand_sample.GDS in the [+Minimal Fab Design Contest: Completed Example](https://www.dropbox.com/scl/fi/brm8pu9swck2n0yt36smz/Participate-in-the-Minimal-Fab-Design-Contest.paper?rlkey=j39e30d1chc5rps2c2uq6vp8p&dl=0#:h2=Completed-Example), but the layout contains many floating MOS elements that were not used.
 
 So, first, create a circuit diagram of just the floating MOS elements:
 
