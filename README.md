@@ -3,8 +3,8 @@ Minimal Fab Design contest for SemiCon Japan 2023. Because Minimal Fab is missin
 
 
 # Participate in the Minimal Fab Design Contest
-The contest reception period is from November 1, 2023 to November 31, 2023, but even after the reception period, please use this document as a tutorial for using the open source minimal fab PDK with open source EDA.
-I used Xschem as the schematic editor, but you can also do the same thing with LTspice. Please use document this as a reference even just for the layout GDS creation part.
+The contest reception period is from November 1, 2023 to November 31, 2023, but even after the reception period, you can use this document as a tutorial for using the open source minimal fab PDK with open source EDA.
+I used Xschem as the schematic editor, but you can also do the same thing with LTspice. Please use this document as a reference even just for the layout GDS creation part.
 
 **Used data**
 
@@ -97,10 +97,8 @@ Run Menu → Tools → DRC → DRC for ICPS2023_5.
 
 ![](https://paper-attachments.dropboxusercontent.com/s_B9AB128CD32F29A56B153513EAD5967CACC1D76117513D7A1DC8EF76295E1344_1699321278735_image.png)
 
+Please correct the layout until the error disappears.
 
-エラーがなくなるようにレイアウトを修正してください。
-
-## Please correct the layout until the error disappears.
 ## Create a schematic for LVS
 
 **Explanation for Pre-processing**
@@ -111,12 +109,9 @@ As shown in the figure, LVS compares the reference netlist extracted from the sc
 
 The script get_reference preprocesses the netlist output from the schematic editor.
 **Creating a circuit netlist**
-作成した回路図は、[+ミニマルファブ設計コンテストに参加してみる: 回路図を作成する](https://paper.dropbox.com/doc/Z5kXip21geUBgb1jYTWgR#:uid=852370074827342975918453&amp;h2=回路図を作成する) に示した、nand_min.sch です。これを、[+ミニマルファブ設計コンテストに参加してみる: 完成例](https://paper.dropbox.com/doc/Z5kXip21geUBgb1jYTWgR#:h2=完成例) のnand_sample.GDSを合致させるのが、LVSの目標ですが、レイアウトには使用しなかったフローティングのMOS素子が多数含まれています。
+The created circuit diagram is nand_min.sch shown in [+Participate in the Minimal Fab Design Contest: Create-a-schematic](https://paper.dropbox.com/doc/Participate-in-the-Minimal-Fab-Design-Contest-Create-a-schematic-Nx6HLSLlAomupxZKQSsIH#:uid=669305565414356345640357&amp;h2=Create-a-schematic). The goal of LVS is to match nand_sample.GDS in the [+Minimal Fab Design Contest: Completed Example](https://www.dropbox.com/scl/fi/brm8pu9swck2n0yt36smz/Participate-in-the-Minimal-Fab-Design-Contest.paper?rlkey=j39e30d1chc5rps2c2uq6vp8p&dl=0#:h2=Completed-Example), but the layout contains many floating MOS elements that were not used.
 
-そこで、まず、フローティングのMOS素子だけの回路図を作ります：
-The created circuit diagram is nand_min.sch shown in [+Participate in the Minimal Fab Design Contest: Create-a-schematic](https://paper.dropbox.com/doc/Participate-in-the-Minimal-Fab-Design-Contest-Create-a-schematic-Nx6HLSLlAomupxZKQSsIH#:uid=669305565414356345640357&amp;h2=Create-a-schematic) . The goal of LVS is to match nand_sample.GDS in the [+Minimal Fab Design Contest: Completed Example](https://www.dropbox.com/scl/fi/brm8pu9swck2n0yt36smz/Participate-in-the-Minimal-Fab-Design-Contest.paper?rlkey=j39e30d1chc5rps2c2uq6vp8p&dl=0#:h2=Completed-Example), but the layout contains many floating MOS elements that were not used.
-
-So, first, create a circuit diagram of just the floating MOS element:
+So, first, create a circuit diagram of just the floating MOS elements:
 
 ![](https://paper-attachments.dropboxusercontent.com/s_B9AB128CD32F29A56B153513EAD5967CACC1D76117513D7A1DC8EF76295E1344_1699321898732_image.png)
 
@@ -155,4 +150,3 @@ please submit a complete set of circuit design data and layout GDS there.
 
 
 　　　　　　　　　　　　　　　　　　　　　　　　　　　（2023/11/7　written by S. Moriyama）
-
